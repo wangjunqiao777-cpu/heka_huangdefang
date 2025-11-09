@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>缃戝潃杞簩缁寸爜宸ュ叿</title>
+  <link rel="stylesheet" href="styles.css?v=light">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>缃戝潃杞簩缁寸爜</h1>
+      <p>杈撳叆缃戝潃锛屼竴閿敓鎴愪簩缁寸爜骞朵笅杞?/p>
+    </header>
+
+    <section class="card">
+      <form id="qrForm" class="form" autocomplete="on">
+        <label for="urlInput" class="label">缃戝潃</label>
+        <div class="url-row">
+          <input id="urlInput" class="input" type="text" inputmode="url" placeholder="渚嬪锛歨ttps://example.com" required>
+          <button id="generateBtn" class="button primary" type="submit">鐢熸垚</button>
+        </div>
+
+        <details class="options" open>
+          <summary>楂樼骇閫夐」</summary>
+          <div class="grid">
+            <div class="field">
+              <label for="sizeInput" class="label">灏哄锛堝儚绱狅級</label>
+              <input id="sizeInput" type="range" min="128" max="1024" step="32" value="256">
+              <div class="hint"><span id="sizeValue">256</span> px</div>
+            </div>
+
+            <div class="field">
+              <label for="marginInput" class="label">杈硅窛</label>
+              <input id="marginInput" type="range" min="0" max="8" step="1" value="4">
+              <div class="hint"><span id="marginValue">4</span></div>
+            </div>
+
+            <div class="field">
+              <label for="eclSelect" class="label">瀹归敊绛夌骇</label>
+              <select id="eclSelect" class="select">
+                <option value="L">L锛垀7%锛?/option>
+                <option value="M" selected>M锛垀15%锛?/option>
+                <option value="Q">Q锛垀25%锛?/option>
+                <option value="H">H锛垀30%锛?/option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="fgColor" class="label">鍓嶆櫙鑹?/label>
+              <input id="fgColor" type="color" value="#000000">
+            </div>
+
+            <div class="field">
+              <label for="bgColor" class="label">鑳屾櫙鑹?/label>
+              <input id="bgColor" type="color" value="#ffffff">
+            </div>
+          </div>
+        </details>
+      </form>
+
+      <div class="preview">
+        <canvas id="qrCanvas" width="256" height="256" aria-label="浜岀淮鐮侀瑙?></canvas>
+      </div>
+
+      <div class="actions">
+        <button id="downloadBtn" class="button" type="button" disabled>涓嬭浇 PNG</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>鏈伐鍏峰湪鏈湴鐢熸垚浜岀淮鐮侊紝涓嶄笂浼犱换浣曟暟鎹€?/span>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+  <script src="app.js"></script>
+  
+</body>
+</html>
+
+
+
